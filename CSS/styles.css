@@ -9,7 +9,7 @@
 
 .body
 {
-  background-image: linear-gradient(to right, #1F1C18, #1F1C18,#8E0E00);
+  background-image: linear-gradient(#000C40, #000c405b,#F0F2F0);
 }
 
 /*NAVIGATION*/
@@ -41,8 +41,18 @@
 
 .solar
 {
-  color: white;
   font-size: 60px;
+}
+
+.whatSolar
+{
+  font-size: 30px;
+}
+
+.solar,
+.whatSolar
+{
+  color: white;
   font-weight: bold;
   text-decoration: none;
   background: -webkit-linear-gradient(#ffffff, #ffffff);
@@ -50,12 +60,23 @@
   -webkit-text-fill-color: transparent;
 }
 
+
 .exploring
+{
+  width: 500px;
+}
+
+.what-theyAre
+{
+  width: 700px;
+}
+
+.exploring,
+.what-theyAre
 {
   color: white;
   font-size: 20px;
   font-weight: bold;
-  width: 500px;
   margin-top: 10px;
   text-decoration: none;
   background: -webkit-linear-gradient(#ffffff, #ffffff);
@@ -76,13 +97,22 @@
 
 #id-navigation
 {
-  background-image: linear-gradient(to right, #25211d, #1F1C18,#8E0E00);
-  backdrop-filter: blur(6px);
+  background-image: linear-gradient(to right, #000C40, #d7d7d77a);
+  backdrop-filter: blur(10px);
+}
+
+#id-navigation
+{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  transition: top 0.3s;
 }
 
 .navbar
 {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
   height: 100px;
   width: 100%;
@@ -106,42 +136,51 @@ section#home
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 0px;
+  margin-top: 100px;
   padding-top: 0px;
 
-  background-image: url(../Image/SolarImage.jpg);
+  background-image: url(../Image/nice2.jpg);
   background-size: cover;
-  opacity: 0.9;
+  opacity: 1;
 
-  -webkit-mask-image: linear-gradient(#000, rgba(0,0,0,0));
-  
-  
 }
 
 
-.text-overlay {
+.text-overlay 
+{
   position: absolute;
-  top: 50%; /* Adjust to vertically center the text if needed */
+  top: 60%; /* Adjust to vertically center the text if needed */
   left: 50%; /* Adjust to horizontally center the text if needed */
   transform: translate(-50%, -50%);
   text-align: center;
 }
 
 
+.about-flares
+{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
 
 
 section#about
 {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "header1 header2";
   margin-top: 100px;
   padding-top: 100px;
   padding-left: 100px;
+  padding-right: 100px;
 }
 
-
+.about-flares
+{
+  grid-area: header2;
+  padding-top: 300px;
+}
 
 
 
@@ -165,5 +204,3 @@ section#sources
   margin-top: 100px;
   padding-top: 100px;
 }
-
-

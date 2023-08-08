@@ -15,3 +15,9 @@ async function fetchData() {
 }
 
 fetchData();
+
+
+
+var prevScroll = window.pageYOffset;
+
+
